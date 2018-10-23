@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3BFD482217CD3E300373D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD481217CD3E300373D10 /* AppDelegate.swift */; };
+		F3BFD487217CD3E300373D10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BFD485217CD3E300373D10 /* Main.storyboard */; };
+		F3BFD48A217CD3E300373D10 /* TeltechFilter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD488217CD3E300373D10 /* TeltechFilter.xcdatamodeld */; };
+		F3BFD48C217CD3ED00373D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3BFD48B217CD3ED00373D10 /* Assets.xcassets */; };
+		F3BFD48F217CD3ED00373D10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BFD48D217CD3ED00373D10 /* LaunchScreen.storyboard */; };
+		F3BFD49A217CD3EE00373D10 /* TeltechFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD499217CD3EE00373D10 /* TeltechFilterTests.swift */; };
+		F3BFD4A5217CD3EE00373D10 /* TeltechFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4A4217CD3EE00373D10 /* TeltechFilterUITests.swift */; };
+		F3BFD4B9217CD59100373D10 /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4B8217CD59100373D10 /* CallDirectoryHandler.swift */; };
+		F3BFD4BD217CD59100373D10 /* CallFilterDirectory.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3BFD4B6217CD59100373D10 /* CallFilterDirectory.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F3BFD4C3217CD5CE00373D10 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4C2217CD5CE00373D10 /* HomeViewController.swift */; };
+		F3BFD4C5217CD62A00373D10 /* BlockedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4C4217CD62A00373D10 /* BlockedListViewController.swift */; };
+		F3BFD4C7217CD67600373D10 /* BlockedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4C6217CD67600373D10 /* BlockedListTableViewCell.swift */; };
+		F3BFD4CE217E1B7E00373D10 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4CD217E1B7E00373D10 /* CoreDataModel.swift */; };
+		F3BFD4D0217E1BF800373D10 /* CoreDataModelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4CF217E1BF800373D10 /* CoreDataModelExt.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3BFD496217CD3EE00373D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3BFD476217CD3E300373D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3BFD47D217CD3E300373D10;
+			remoteInfo = TeltechFilter;
+		};
+		F3BFD4A1217CD3EE00373D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3BFD476217CD3E300373D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3BFD47D217CD3E300373D10;
+			remoteInfo = TeltechFilter;
+		};
+		F3BFD4BB217CD59100373D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3BFD476217CD3E300373D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3BFD4B5217CD59100373D10;
+			remoteInfo = CallFilterDirectory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3BFD4C1217CD59100373D10 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F3BFD4BD217CD59100373D10 /* CallFilterDirectory.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F3BFD47E217CD3E300373D10 /* TeltechFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeltechFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BFD481217CD3E300373D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3BFD486217CD3E300373D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3BFD489217CD3E300373D10 /* TeltechFilter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeltechFilter.xcdatamodel; sourceTree = "<group>"; };
+		F3BFD48B217CD3ED00373D10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3BFD48E217CD3ED00373D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3BFD490217CD3ED00373D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3BFD495217CD3EE00373D10 /* TeltechFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeltechFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BFD499217CD3EE00373D10 /* TeltechFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechFilterTests.swift; sourceTree = "<group>"; };
+		F3BFD49B217CD3EE00373D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3BFD4A0217CD3EE00373D10 /* TeltechFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeltechFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BFD4A4217CD3EE00373D10 /* TeltechFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechFilterUITests.swift; sourceTree = "<group>"; };
+		F3BFD4A6217CD3EE00373D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3BFD4B6217CD59100373D10 /* CallFilterDirectory.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CallFilterDirectory.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BFD4B8217CD59100373D10 /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
+		F3BFD4BA217CD59100373D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3BFD4C2217CD5CE00373D10 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F3BFD4C4217CD62A00373D10 /* BlockedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedListViewController.swift; sourceTree = "<group>"; };
+		F3BFD4C6217CD67600373D10 /* BlockedListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedListTableViewCell.swift; sourceTree = "<group>"; };
+		F3BFD4C8217CD84700373D10 /* TeltechFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeltechFilter.entitlements; sourceTree = "<group>"; };
+		F3BFD4C9217CD85D00373D10 /* CallFilterDirectory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallFilterDirectory.entitlements; sourceTree = "<group>"; };
+		F3BFD4CD217E1B7E00373D10 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
+		F3BFD4CF217E1BF800373D10 /* CoreDataModelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelExt.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3BFD47B217CD3E300373D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD492217CD3EE00373D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD49D217CD3EE00373D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD4B3217CD59100373D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3BFD475217CD3E300373D10 = {
+			isa = PBXGroup;
+			children = (
+				F3BFD480217CD3E300373D10 /* TeltechFilter */,
+				F3BFD498217CD3EE00373D10 /* TeltechFilterTests */,
+				F3BFD4A3217CD3EE00373D10 /* TeltechFilterUITests */,
+				F3BFD4B7217CD59100373D10 /* CallFilterDirectory */,
+				F3BFD47F217CD3E300373D10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3BFD47F217CD3E300373D10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFD47E217CD3E300373D10 /* TeltechFilter.app */,
+				F3BFD495217CD3EE00373D10 /* TeltechFilterTests.xctest */,
+				F3BFD4A0217CD3EE00373D10 /* TeltechFilterUITests.xctest */,
+				F3BFD4B6217CD59100373D10 /* CallFilterDirectory.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3BFD480217CD3E300373D10 /* TeltechFilter */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFD4D1217E1C7000373D10 /* Model */,
+				F3BFD4D2217E1C9100373D10 /* View */,
+				F3BFD4D3217E1CA400373D10 /* ViewController */,
+				F3BFD481217CD3E300373D10 /* AppDelegate.swift */,
+				F3BFD485217CD3E300373D10 /* Main.storyboard */,
+				F3BFD48B217CD3ED00373D10 /* Assets.xcassets */,
+				F3BFD48D217CD3ED00373D10 /* LaunchScreen.storyboard */,
+				F3BFD490217CD3ED00373D10 /* Info.plist */,
+				F3BFD4C8217CD84700373D10 /* TeltechFilter.entitlements */,
+			);
+			path = TeltechFilter;
+			sourceTree = "<group>";
+		};
+		F3BFD498217CD3EE00373D10 /* TeltechFilterTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFD499217CD3EE00373D10 /* TeltechFilterTests.swift */,
+				F3BFD49B217CD3EE00373D10 /* Info.plist */,
+			);
+			path = TeltechFilterTests;
+			sourceTree = "<group>";
+		};
+		F3BFD4A3217CD3EE00373D10 /* TeltechFilterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFD4A4217CD3EE00373D10 /* TeltechFilterUITests.swift */,
+				F3BFD4A6217CD3EE00373D10 /* Info.plist */,
+			);
+			path = TeltechFilterUITests;
+			sourceTree = "<group>";
+		};
+		F3BFD4B7217CD59100373D10 /* CallFilterDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFD4C9217CD85D00373D10 /* CallFilterDirectory.entitlements */,
+				F3BFD4B8217CD59100373D10 /* CallDirectoryHandler.swift */,
+				F3BFD4CF217E1BF800373D10 /* CoreDataModelExt.swift */,
+				F3BFD4BA217CD59100373D10 /* Info.plist */,
+			);
+			path = CallFilterDirectory;
+			sourceTree = "<group>";
+		};
+		F3BFD4D1217E1C7000373D10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFD488217CD3E300373D10 /* TeltechFilter.xcdatamodeld */,
+				F3BFD4CD217E1B7E00373D10 /* CoreDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3BFD4D2217E1C9100373D10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFD4C6217CD67600373D10 /* BlockedListTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3BFD4D3217E1CA400373D10 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFD4C2217CD5CE00373D10 /* HomeViewController.swift */,
+				F3BFD4C4217CD62A00373D10 /* BlockedListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3BFD47D217CD3E300373D10 /* TeltechFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3BFD4A9217CD3EE00373D10 /* Build configuration list for PBXNativeTarget "TeltechFilter" */;
+			buildPhases = (
+				F3BFD47A217CD3E300373D10 /* Sources */,
+				F3BFD47B217CD3E300373D10 /* Frameworks */,
+				F3BFD47C217CD3E300373D10 /* Resources */,
+				F3BFD4C1217CD59100373D10 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3BFD4BC217CD59100373D10 /* PBXTargetDependency */,
+			);
+			name = TeltechFilter;
+			productName = TeltechFilter;
+			productReference = F3BFD47E217CD3E300373D10 /* TeltechFilter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3BFD494217CD3EE00373D10 /* TeltechFilterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3BFD4AC217CD3EE00373D10 /* Build configuration list for PBXNativeTarget "TeltechFilterTests" */;
+			buildPhases = (
+				F3BFD491217CD3EE00373D10 /* Sources */,
+				F3BFD492217CD3EE00373D10 /* Frameworks */,
+				F3BFD493217CD3EE00373D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3BFD497217CD3EE00373D10 /* PBXTargetDependency */,
+			);
+			name = TeltechFilterTests;
+			productName = TeltechFilterTests;
+			productReference = F3BFD495217CD3EE00373D10 /* TeltechFilterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3BFD49F217CD3EE00373D10 /* TeltechFilterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3BFD4AF217CD3EE00373D10 /* Build configuration list for PBXNativeTarget "TeltechFilterUITests" */;
+			buildPhases = (
+				F3BFD49C217CD3EE00373D10 /* Sources */,
+				F3BFD49D217CD3EE00373D10 /* Frameworks */,
+				F3BFD49E217CD3EE00373D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3BFD4A2217CD3EE00373D10 /* PBXTargetDependency */,
+			);
+			name = TeltechFilterUITests;
+			productName = TeltechFilterUITests;
+			productReference = F3BFD4A0217CD3EE00373D10 /* TeltechFilterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F3BFD4B5217CD59100373D10 /* CallFilterDirectory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3BFD4BE217CD59100373D10 /* Build configuration list for PBXNativeTarget "CallFilterDirectory" */;
+			buildPhases = (
+				F3BFD4B2217CD59100373D10 /* Sources */,
+				F3BFD4B3217CD59100373D10 /* Frameworks */,
+				F3BFD4B4217CD59100373D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CallFilterDirectory;
+			productName = CallFilterDirectory;
+			productReference = F3BFD4B6217CD59100373D10 /* CallFilterDirectory.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3BFD476217CD3E300373D10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Ariela Cohen";
+				TargetAttributes = {
+					F3BFD47D217CD3E300373D10 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					F3BFD494217CD3EE00373D10 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F3BFD47D217CD3E300373D10;
+					};
+					F3BFD49F217CD3EE00373D10 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F3BFD47D217CD3E300373D10;
+					};
+					F3BFD4B5217CD59100373D10 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F3BFD479217CD3E300373D10 /* Build configuration list for PBXProject "TeltechFilter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3BFD475217CD3E300373D10;
+			productRefGroup = F3BFD47F217CD3E300373D10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3BFD47D217CD3E300373D10 /* TeltechFilter */,
+				F3BFD494217CD3EE00373D10 /* TeltechFilterTests */,
+				F3BFD49F217CD3EE00373D10 /* TeltechFilterUITests */,
+				F3BFD4B5217CD59100373D10 /* CallFilterDirectory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3BFD47C217CD3E300373D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BFD48F217CD3ED00373D10 /* LaunchScreen.storyboard in Resources */,
+				F3BFD48C217CD3ED00373D10 /* Assets.xcassets in Resources */,
+				F3BFD487217CD3E300373D10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD493217CD3EE00373D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD49E217CD3EE00373D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD4B4217CD59100373D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3BFD47A217CD3E300373D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BFD4CE217E1B7E00373D10 /* CoreDataModel.swift in Sources */,
+				F3BFD4C7217CD67600373D10 /* BlockedListTableViewCell.swift in Sources */,
+				F3BFD48A217CD3E300373D10 /* TeltechFilter.xcdatamodeld in Sources */,
+				F3BFD4C5217CD62A00373D10 /* BlockedListViewController.swift in Sources */,
+				F3BFD482217CD3E300373D10 /* AppDelegate.swift in Sources */,
+				F3BFD4C3217CD5CE00373D10 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD491217CD3EE00373D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BFD49A217CD3EE00373D10 /* TeltechFilterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD49C217CD3EE00373D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BFD4A5217CD3EE00373D10 /* TeltechFilterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD4B2217CD59100373D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BFD4D0217E1BF800373D10 /* CoreDataModelExt.swift in Sources */,
+				F3BFD4B9217CD59100373D10 /* CallDirectoryHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3BFD497217CD3EE00373D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3BFD47D217CD3E300373D10 /* TeltechFilter */;
+			targetProxy = F3BFD496217CD3EE00373D10 /* PBXContainerItemProxy */;
+		};
+		F3BFD4A2217CD3EE00373D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3BFD47D217CD3E300373D10 /* TeltechFilter */;
+			targetProxy = F3BFD4A1217CD3EE00373D10 /* PBXContainerItemProxy */;
+		};
+		F3BFD4BC217CD59100373D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3BFD4B5217CD59100373D10 /* CallFilterDirectory */;
+			targetProxy = F3BFD4BB217CD59100373D10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3BFD485217CD3E300373D10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3BFD486217CD3E300373D10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3BFD48D217CD3ED00373D10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3BFD48E217CD3ED00373D10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3BFD4A7217CD3EE00373D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3BFD4A8217CD3EE00373D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3BFD4AA217CD3EE00373D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TeltechFilter/TeltechFilter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = TeltechFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3BFD4AB217CD3EE00373D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TeltechFilter/TeltechFilter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = TeltechFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3BFD4AD217CD3EE00373D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = TeltechFilterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeltechFilter.app/TeltechFilter";
+			};
+			name = Debug;
+		};
+		F3BFD4AE217CD3EE00373D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = TeltechFilterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeltechFilter.app/TeltechFilter";
+			};
+			name = Release;
+		};
+		F3BFD4B0217CD3EE00373D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = TeltechFilterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeltechFilter;
+			};
+			name = Debug;
+		};
+		F3BFD4B1217CD3EE00373D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = TeltechFilterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeltechFilter;
+			};
+			name = Release;
+		};
+		F3BFD4BF217CD59100373D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CallFilterDirectory/CallFilterDirectory.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = CallFilterDirectory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilter.CallFilterDirectory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3BFD4C0217CD59100373D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CallFilterDirectory/CallFilterDirectory.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = CallFilterDirectory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilter.CallFilterDirectory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3BFD479217CD3E300373D10 /* Build configuration list for PBXProject "TeltechFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3BFD4A7217CD3EE00373D10 /* Debug */,
+				F3BFD4A8217CD3EE00373D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3BFD4A9217CD3EE00373D10 /* Build configuration list for PBXNativeTarget "TeltechFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3BFD4AA217CD3EE00373D10 /* Debug */,
+				F3BFD4AB217CD3EE00373D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3BFD4AC217CD3EE00373D10 /* Build configuration list for PBXNativeTarget "TeltechFilterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3BFD4AD217CD3EE00373D10 /* Debug */,
+				F3BFD4AE217CD3EE00373D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3BFD4AF217CD3EE00373D10 /* Build configuration list for PBXNativeTarget "TeltechFilterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3BFD4B0217CD3EE00373D10 /* Debug */,
+				F3BFD4B1217CD3EE00373D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3BFD4BE217CD59100373D10 /* Build configuration list for PBXNativeTarget "CallFilterDirectory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3BFD4BF217CD59100373D10 /* Debug */,
+				F3BFD4C0217CD59100373D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F3BFD488217CD3E300373D10 /* TeltechFilter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F3BFD489217CD3E300373D10 /* TeltechFilter.xcdatamodel */,
+			);
+			currentVersion = F3BFD489217CD3E300373D10 /* TeltechFilter.xcdatamodel */;
+			path = TeltechFilter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F3BFD476217CD3E300373D10 /* Project object */;
+}
