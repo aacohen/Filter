@@ -20,5 +20,6 @@ Filter is an app that processes incoming calls and filters unwanted text message
 
 -Messages filter is for sms and mms messages only (not iMessages) and is supported in iOS11+. 
 
--Though there is a user configurable key word filter for the texts. It is not yet filtered by the system. It works if words are hard coded into the code. However, getting an error loading the CoreData model in the extension. 
+-Though there is a user configurable key word filter for the texts. It is not yet filtered by the system. It works if words are hard coded into the code. However, getting an error loading the CoreData model in the extension.
+
 **The app currently only filters texts with the word "free" in it. These messages are put into the "Unknown & Junk" folder in Messages.
