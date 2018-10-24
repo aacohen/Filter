@@ -21,6 +21,8 @@
 		F3BFD4C7217CD67600373D10 /* BlockedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4C6217CD67600373D10 /* BlockedListTableViewCell.swift */; };
 		F3BFD4CE217E1B7E00373D10 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4CD217E1B7E00373D10 /* CoreDataModel.swift */; };
 		F3BFD4D0217E1BF800373D10 /* CoreDataModelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4CF217E1BF800373D10 /* CoreDataModelExt.swift */; };
+		F3BFD4DB217FB62E00373D10 /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4DA217FB62E00373D10 /* MessageFilterExtension.swift */; };
+		F3BFD4DF217FB62E00373D10 /* MessagesFilter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3BFD4D8217FB62E00373D10 /* MessagesFilter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,13 @@
 			remoteGlobalIDString = F3BFD4B5217CD59100373D10;
 			remoteInfo = CallFilterDirectory;
 		};
+		F3BFD4DD217FB62E00373D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3BFD476217CD3E300373D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3BFD4D7217FB62E00373D10;
+			remoteInfo = MessagesFilter;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				F3BFD4DF217FB62E00373D10 /* MessagesFilter.appex in Embed App Extensions */,
 				F3BFD4BD217CD59100373D10 /* CallFilterDirectory.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -85,6 +95,9 @@
 		F3BFD4C9217CD85D00373D10 /* CallFilterDirectory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallFilterDirectory.entitlements; sourceTree = "<group>"; };
 		F3BFD4CD217E1B7E00373D10 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		F3BFD4CF217E1BF800373D10 /* CoreDataModelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelExt.swift; sourceTree = "<group>"; };
+		F3BFD4D8217FB62E00373D10 /* MessagesFilter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesFilter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BFD4DA217FB62E00373D10 /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
+		F3BFD4DC217FB62E00373D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +129,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3BFD4D5217FB62E00373D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -126,6 +146,7 @@
 				F3BFD498217CD3EE00373D10 /* TeltechFilterTests */,
 				F3BFD4A3217CD3EE00373D10 /* TeltechFilterUITests */,
 				F3BFD4B7217CD59100373D10 /* CallFilterDirectory */,
+				F3BFD4D9217FB62E00373D10 /* MessagesFilter */,
 				F3BFD47F217CD3E300373D10 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +158,7 @@
 				F3BFD495217CD3EE00373D10 /* TeltechFilterTests.xctest */,
 				F3BFD4A0217CD3EE00373D10 /* TeltechFilterUITests.xctest */,
 				F3BFD4B6217CD59100373D10 /* CallFilterDirectory.appex */,
+				F3BFD4D8217FB62E00373D10 /* MessagesFilter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +234,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		F3BFD4D9217FB62E00373D10 /* MessagesFilter */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFD4DA217FB62E00373D10 /* MessageFilterExtension.swift */,
+				F3BFD4DC217FB62E00373D10 /* Info.plist */,
+			);
+			path = MessagesFilter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +259,7 @@
 			);
 			dependencies = (
 				F3BFD4BC217CD59100373D10 /* PBXTargetDependency */,
+				F3BFD4DE217FB62E00373D10 /* PBXTargetDependency */,
 			);
 			name = TeltechFilter;
 			productName = TeltechFilter;
@@ -287,6 +319,23 @@
 			productReference = F3BFD4B6217CD59100373D10 /* CallFilterDirectory.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		F3BFD4D7217FB62E00373D10 /* MessagesFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3BFD4E2217FB62E00373D10 /* Build configuration list for PBXNativeTarget "MessagesFilter" */;
+			buildPhases = (
+				F3BFD4D4217FB62E00373D10 /* Sources */,
+				F3BFD4D5217FB62E00373D10 /* Frameworks */,
+				F3BFD4D6217FB62E00373D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessagesFilter;
+			productName = MessagesFilter;
+			productReference = F3BFD4D8217FB62E00373D10 /* MessagesFilter.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -321,6 +370,9 @@
 							};
 						};
 					};
+					F3BFD4D7217FB62E00373D10 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = F3BFD479217CD3E300373D10 /* Build configuration list for PBXProject "TeltechFilter" */;
@@ -340,6 +392,7 @@
 				F3BFD494217CD3EE00373D10 /* TeltechFilterTests */,
 				F3BFD49F217CD3EE00373D10 /* TeltechFilterUITests */,
 				F3BFD4B5217CD59100373D10 /* CallFilterDirectory */,
+				F3BFD4D7217FB62E00373D10 /* MessagesFilter */,
 			);
 		};
 /* End PBXProject section */
@@ -370,6 +423,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3BFD4B4217CD59100373D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFD4D6217FB62E00373D10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -417,6 +477,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3BFD4D4217FB62E00373D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BFD4DB217FB62E00373D10 /* MessageFilterExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -434,6 +502,11 @@
 			isa = PBXTargetDependency;
 			target = F3BFD4B5217CD59100373D10 /* CallFilterDirectory */;
 			targetProxy = F3BFD4BB217CD59100373D10 /* PBXContainerItemProxy */;
+		};
+		F3BFD4DE217FB62E00373D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3BFD4D7217FB62E00373D10 /* MessagesFilter */;
+			targetProxy = F3BFD4DD217FB62E00373D10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -737,6 +810,44 @@
 			};
 			name = Release;
 		};
+		F3BFD4E0217FB62E00373D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = MessagesFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilter.MessagesFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3BFD4E1217FB62E00373D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HD7J783WQX;
+				INFOPLIST_FILE = MessagesFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilter.MessagesFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -781,6 +892,15 @@
 			buildConfigurations = (
 				F3BFD4BF217CD59100373D10 /* Debug */,
 				F3BFD4C0217CD59100373D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3BFD4E2217FB62E00373D10 /* Build configuration list for PBXNativeTarget "MessagesFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3BFD4E0217FB62E00373D10 /* Debug */,
+				F3BFD4E1217FB62E00373D10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
