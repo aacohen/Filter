@@ -8,10 +8,18 @@
 
 import IdentityLookup
 
-final class MessageFilterExtension: ILMessageFilterExtension {}
+@available(iOSApplicationExtension 11.0, *)
+final class MessageFilterExtension: ILMessageFilterExtension {
+    
+    var words:[String] = CoreDataModelExt2.shared.loadWordsForMessageExt()
+}
 
+
+
+@available(iOSApplicationExtension 11.0, *)
 extension MessageFilterExtension: ILMessageFilterQueryHandling {
     
+    @available(iOSApplicationExtension 11.0, *)
     func handle(_ queryRequest: ILMessageFilterQueryRequest, context: ILMessageFilterExtensionContext, completion: @escaping (ILMessageFilterQueryResponse) -> Void) {
         // First, check whether to filter using offline data (if possible).
         let offlineAction = self.offlineAction(for: queryRequest)
@@ -43,12 +51,28 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         }
     }
     
-    private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
-        guard let messageBody = queryRequest.messageBody else {
-            return .none
-        }
-        return messageBody.lowercased().contains("survey") ? .filter : .none
-    }
+//    private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
+//        guard let messageBody = queryRequest.messageBody else {
+//            return .none
+//        }
+//        return messageBody.lowercased().contains("survey") ? .filter : .none
+//    }
+//
+    
+        private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
+            guard let messageBody = queryRequest.messageBody?.lowercased() else {return .none}
+           
+            
+            for word in words {
+                print("words: \(word)")
+                if messageBody.contains(word.lowercased()) {
+                    return .filter
+                }
+            }
+   return .allow
+}
+    
+    
     
     private func action(for networkResponse: ILNetworkResponse) -> ILMessageFilterAction {
         // Replace with logic to parse the HTTP response and data payload of `networkResponse` to return an action.

@@ -17,6 +17,7 @@ class CoreDataModel {
     
 //    var blockedList: [CXCallDirectoryPhoneNumber] = [1_253_950_1212, 1_732_531_8121]
     var blockedList: [CXCallDirectoryPhoneNumber] = []
+    var wordList: [Text] = []
     
     private static let name = "TeltechFilter"
     
@@ -64,7 +65,6 @@ class CoreDataModel {
     func fetch() {
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName:"PhoneCall")
-//                request.returnsObjectsAsFaults = false
         
         do {
             let result = try context.fetch(request)
@@ -112,6 +112,45 @@ class CoreDataModel {
 //        }
 //        return newArray
 //    }
+    
+    //MARK: - Functions for Text Entity
+    
+    func createKeyWord(word: String) {
+        let entity = NSEntityDescription.entity(forEntityName: "Text", in: context)
+        let newText = NSManagedObject(entity: entity!, insertInto: context)
+        newText.setValue(word, forKey: "keyWord")
+        wordList.append(newText as! Text)
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error saving")
+            // handle error
+        }
+    }
+    
+    func fetchKeyWords() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Text")
+        
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject]{
+                
+                wordList.append(data as! Text)
+            }
+        } catch {
+            print("error")
+        }
+    }
+    
+        func deleteKeyWord(indexPath: IndexPath) {
+    
+            let text = wordList[indexPath.row]
+                context.delete(text)
+
+                wordList.remove(at: indexPath.row)
+                saveContext()
+        }
     
 }
 

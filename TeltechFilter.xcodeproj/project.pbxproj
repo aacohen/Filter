@@ -23,6 +23,9 @@
 		F3BFD4D0217E1BF800373D10 /* CoreDataModelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4CF217E1BF800373D10 /* CoreDataModelExt.swift */; };
 		F3BFD4DB217FB62E00373D10 /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4DA217FB62E00373D10 /* MessageFilterExtension.swift */; };
 		F3BFD4DF217FB62E00373D10 /* MessagesFilter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3BFD4D8217FB62E00373D10 /* MessagesFilter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F3BFD4E42180A7CC00373D10 /* TextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4E32180A7CC00373D10 /* TextTableViewController.swift */; };
+		F3BFD4E62180A80600373D10 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4E52180A80600373D10 /* TextTableViewCell.swift */; };
+		F3BFD4E82180B68A00373D10 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BFD4E72180B68A00373D10 /* CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,10 @@
 		F3BFD4D8217FB62E00373D10 /* MessagesFilter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesFilter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BFD4DA217FB62E00373D10 /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
 		F3BFD4DC217FB62E00373D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3BFD4E32180A7CC00373D10 /* TextTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewController.swift; sourceTree = "<group>"; };
+		F3BFD4E52180A80600373D10 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		F3BFD4E72180B68A00373D10 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		F3BFD4E92180BD4600373D10 /* MessagesFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessagesFilter.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				F3BFD4C6217CD67600373D10 /* BlockedListTableViewCell.swift */,
+				F3BFD4E52180A80600373D10 /* TextTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 			children = (
 				F3BFD4C2217CD5CE00373D10 /* HomeViewController.swift */,
 				F3BFD4C4217CD62A00373D10 /* BlockedListViewController.swift */,
+				F3BFD4E32180A7CC00373D10 /* TextTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -237,7 +246,9 @@
 		F3BFD4D9217FB62E00373D10 /* MessagesFilter */ = {
 			isa = PBXGroup;
 			children = (
+				F3BFD4E92180BD4600373D10 /* MessagesFilter.entitlements */,
 				F3BFD4DA217FB62E00373D10 /* MessageFilterExtension.swift */,
+				F3BFD4E72180B68A00373D10 /* CoreData.swift */,
 				F3BFD4DC217FB62E00373D10 /* Info.plist */,
 			);
 			path = MessagesFilter;
@@ -372,6 +383,11 @@
 					};
 					F3BFD4D7217FB62E00373D10 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -445,7 +461,9 @@
 			files = (
 				F3BFD4CE217E1B7E00373D10 /* CoreDataModel.swift in Sources */,
 				F3BFD4C7217CD67600373D10 /* BlockedListTableViewCell.swift in Sources */,
+				F3BFD4E62180A80600373D10 /* TextTableViewCell.swift in Sources */,
 				F3BFD48A217CD3E300373D10 /* TeltechFilter.xcdatamodeld in Sources */,
+				F3BFD4E42180A7CC00373D10 /* TextTableViewController.swift in Sources */,
 				F3BFD4C5217CD62A00373D10 /* BlockedListViewController.swift in Sources */,
 				F3BFD482217CD3E300373D10 /* AppDelegate.swift in Sources */,
 				F3BFD4C3217CD5CE00373D10 /* HomeViewController.swift in Sources */,
@@ -481,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3BFD4E82180B68A00373D10 /* CoreData.swift in Sources */,
 				F3BFD4DB217FB62E00373D10 /* MessageFilterExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -636,7 +655,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -655,6 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD7J783WQX;
 				INFOPLIST_FILE = TeltechFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -662,7 +682,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -675,6 +695,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD7J783WQX;
 				INFOPLIST_FILE = TeltechFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -682,7 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ArielaCohen.TeltechFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -776,6 +797,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD7J783WQX;
 				INFOPLIST_FILE = CallFilterDirectory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -797,6 +819,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD7J783WQX;
 				INFOPLIST_FILE = CallFilterDirectory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -813,9 +836,11 @@
 		F3BFD4E0217FB62E00373D10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessagesFilter/MessagesFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD7J783WQX;
 				INFOPLIST_FILE = MessagesFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -832,9 +857,11 @@
 		F3BFD4E1217FB62E00373D10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessagesFilter/MessagesFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD7J783WQX;
 				INFOPLIST_FILE = MessagesFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

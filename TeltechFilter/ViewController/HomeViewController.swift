@@ -14,11 +14,13 @@ class HomeViewController: UIViewController {
     var blockListButton = UIButton()
     var imageView = UIImageView()
     var logoImageView = UIImageView()
+    var filterTexts = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         CoreDataModel.shared.fetch()
+        CoreDataModel.shared.fetchKeyWords()
         
     }
     
@@ -58,11 +60,32 @@ class HomeViewController: UIViewController {
         blockListButton.layer.borderWidth = 1
         blockListButton.layer.borderColor = UIColor.white.cgColor
         
+        
+        self.view.addSubview(filterTexts)
+        filterTexts.translatesAutoresizingMaskIntoConstraints = false
+        filterTexts.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        filterTexts.topAnchor.constraint(equalTo: blockListButton.bottomAnchor, constant: 20).isActive = true
+        filterTexts.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.6).isActive = true
+        filterTexts.heightAnchor.constraint(equalTo: filterTexts.widthAnchor, multiplier: 0.25).isActive = true
+        filterTexts.setTitle("Filter Texts", for: .normal)
+        filterTexts.setTitleColor(UIColor.white, for: .normal)
+        filterTexts.addTarget(self, action: #selector(filterTextButtonPressed), for: .touchUpInside)
+        filterTexts.backgroundColor = UIColor.init(hex: "9B9B9B").withAlphaComponent(0.29)
+        filterTexts.layer.masksToBounds = true
+        filterTexts.layer.cornerRadius = 30
+        filterTexts.layer.borderWidth = 1
+        filterTexts.layer.borderColor = UIColor.white.cgColor
+        
     
     }
     
     @objc func blockListButtonPressed() {
         let destinationVc = BlockedListViewController()
+        self.navigationController?.pushViewController(destinationVc, animated: true)
+    }
+    
+    @objc func filterTextButtonPressed() {
+        let destinationVc = TextTableViewController()
         self.navigationController?.pushViewController(destinationVc, animated: true)
     }
 }

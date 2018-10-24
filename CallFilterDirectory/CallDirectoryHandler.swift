@@ -15,14 +15,18 @@ class CallDirectoryHandler: CXCallDirectoryProvider {
     override func beginRequest(with context: CXCallDirectoryExtensionContext) {
         context.delegate = self
 
-        if context.isIncremental {
-            addOrRemoveIncrementalBlockingPhoneNumbers(to: context)
-
-            addOrRemoveIncrementalIdentificationPhoneNumbers(to: context)
+        if #available(iOSApplicationExtension 11.0, *) {
+            if context.isIncremental {
+                addOrRemoveIncrementalBlockingPhoneNumbers(to: context)
+                
+                addOrRemoveIncrementalIdentificationPhoneNumbers(to: context)
+            } else {
+                addAllBlockingPhoneNumbers(to: context)
+                
+                addAllIdentificationPhoneNumbers(to: context)
+            }
         } else {
-            addAllBlockingPhoneNumbers(to: context)
-
-            addAllIdentificationPhoneNumbers(to: context)
+            // Fallback on earlier versions
         }
 
         context.completeRequest()
@@ -81,7 +85,11 @@ class CallDirectoryHandler: CXCallDirectoryProvider {
         let phoneNumbersToRemove: [CXCallDirectoryPhoneNumber] = [ ]
 
         for phoneNumber in phoneNumbersToRemove {
-            context.removeIdentificationEntry(withPhoneNumber: phoneNumber)
+            if #available(iOSApplicationExtension 11.0, *) {
+                context.removeIdentificationEntry(withPhoneNumber: phoneNumber)
+            } else {
+                // Fallback on earlier versions
+            }
         }
 
         // Record the most-recently loaded set of identification entries in data store for the next incremental load...
