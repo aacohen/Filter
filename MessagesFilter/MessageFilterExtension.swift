@@ -11,7 +11,7 @@ import IdentityLookup
 @available(iOSApplicationExtension 11.0, *)
 final class MessageFilterExtension: ILMessageFilterExtension {
     
-    var words:[String] = CoreDataModelExt2.shared.loadWordsForMessageExt()
+    var words:[String] = []
 }
 
 
@@ -62,6 +62,7 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
             guard let messageBody = queryRequest.messageBody?.lowercased() else {return .none}
            
+            words = CoreDataModelExt2.shared.loadWordsForMessageExt()
             
             for word in words {
                 print("words: \(word)")
